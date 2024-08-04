@@ -14,7 +14,7 @@ const ProjectDescription = () => {
     useEffect(() => {
         const fetchProject = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/api/displayproject/${projectId}`);
+                const response = await axios.get(`https://group2vercel-backend.vercel.app/api/displayproject/${projectId}`);
                 console.log(response.data)
                 setProject(response.data);
             } catch (error) {

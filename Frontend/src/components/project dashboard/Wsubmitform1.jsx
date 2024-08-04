@@ -60,7 +60,7 @@ const Wsubmitform1 = () => {
         // student: loggedInStudentId
       };
 
-      const res = await axiosInstance.post('http://localhost:3000/api/addsubmissiondata', payload, {
+      const res = await axiosInstance.post('https://group2vercel-backend.vercel.app/api/addsubmissiondata', payload, {
         headers: {
           Authorization: `Bearer ${token}`
         }

@@ -34,7 +34,7 @@ const ProjectTopiclist = () => {
     const handleConfirmSelection = async () => {
         try {
             const token = localStorage.getItem('token');
-                const response = await axios.post('http://localhost:3000/api/selectproject', {
+                const response = await axios.post('https://group2vercel-backend.vercel.app/api/selectproject', {
                     selectedProjectId: selectedProjectId},
                    { headers: {
                         Authorization: `Bearer ${token}`
@@ -58,7 +58,7 @@ const ProjectTopiclist = () => {
         const fetchProjects = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get('http://localhost:3000/api/displayproject', {
+                const response = await axios.get('https://group2vercel-backend.vercel.app/api/displayproject', {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }

@@ -24,7 +24,7 @@ const Reference = () => {
     const fetchReferenceData = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:3000/api/getrefs', {
+        const response = await axios.get('https://group2vercel-backend.vercel.app/api/getrefs', {
           headers: {
             Authorization: `Bearer ${token}`
           }

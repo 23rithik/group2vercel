@@ -13,7 +13,7 @@ const Hero = () => {
   const fetchProject = async () => {
     try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:3000/api/getproject', {
+        const response = await axios.get('https://group2vercel-backend.vercel.app/api/getproject', {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -27,7 +27,7 @@ const Hero = () => {
 
 const downloadPDF = async (pdfLink) => {
   try {
-      const response = await axios.get(`http://localhost:3000/api/${pdfLink}`,{
+      const response = await axios.get(`https://group2vercel-backend.vercel.app/api/${pdfLink}`,{
         responseType:'blob',
         credentials: 'omit',  
       })

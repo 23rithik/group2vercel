@@ -24,7 +24,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post('http://localhost:3000/api/signup', formData);
+      const res = await axios.post('https://group2vercel-backend.vercel.app/api/signup', formData);
       alert(res.data.message);
       navigate('/login'); // Redirect to login page after successful signup
     } catch (error) {

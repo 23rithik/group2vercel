@@ -66,7 +66,7 @@ const Wsubmit = () => {
   useEffect(() => {
     const fetchSubmissionData = () => {
       const token = localStorage.getItem('token');
-      axiosInstance.get('http://localhost:3000/api/wsubmitdata', {
+      axiosInstance.get('https://group2vercel-backend.vercel.app/api/wsubmitdata', {
         headers: {
           Authorization: `Bearer ${token}`
         }

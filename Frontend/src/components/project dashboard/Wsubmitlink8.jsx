@@ -23,7 +23,7 @@ const Wsubmitlink8 = () => {
     const fetchSubmissionData = async () => {
       const token = localStorage.getItem('token');
       try {
-        const response = await axiosInstance.post('http://localhost:3000/api/getsubmissiondata', {}, {
+        const response = await axiosInstance.post('https://group2vercel-backend.vercel.app/api/getsubmissiondata', {}, {
           headers: {
             Authorization: `Bearer ${token}`
           } 

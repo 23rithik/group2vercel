@@ -21,7 +21,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post('http://localhost:3000/api/login', formData);
+      const res = await axios.post('https://group2vercel-backend.vercel.app/api/login', formData);
       localStorage.setItem('token',res.data.token)
       alert('Login successful!'); 
       navigate(res.data.dashboard); 
