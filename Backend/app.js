@@ -10,7 +10,7 @@ app.use(cors({
   credentials:true,
   methods:['POST','GET','DELETE','PUT','PATCH']
 }));
-// app.use('/uploads', express.static('Uploads'));
+app.use('/uploads', express.static('Uploads'));
 // app.use('/Uploads', express.static(path.join(__dirname, 'Uploads')));
 
 const authRouter = require('./Routers/authRouter');
