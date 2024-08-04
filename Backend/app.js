@@ -5,7 +5,11 @@ require('./DB/mongoDB')
 
 const app = express()
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin:"https://group2vercel-frontend.vercel.app/",
+  credentials:true,
+  methods:['POST','GET','DELETE','PUT']
+}));
 app.use('/uploads', express.static('Uploads'));
 
 const authRouter = require('./Routers/authRouter');
