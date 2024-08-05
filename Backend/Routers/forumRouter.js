@@ -4,12 +4,12 @@ const { updatePost, deletePost, getPosts, postQuery, getId, postReply } = requir
 const forumRouter = express.Router()
 
 
-forumRouter.post('/api/postquery/:student_id',postQuery)
-forumRouter.get('/api/getpost',verifyToken,getPosts)
-forumRouter.delete('/api/deletepost/:post_id',deletePost)
-forumRouter.patch('/api/updatepost/:post_id',updatePost)
-forumRouter.get('/api/getid', verifyToken,getId)
-forumRouter.post('/api/postreply/:post_id',verifyToken,postReply)
+forumRouter.post('/postquery/:student_id',postQuery)
+forumRouter.get('/getpost',verifyToken,getPosts)
+forumRouter.delete('/deletepost/:post_id',deletePost)
+forumRouter.patch('/updatepost/:post_id',updatePost)
+forumRouter.get('/getid', verifyToken,getId)
+forumRouter.post('/postreply/:post_id',verifyToken,postReply)
 
 
 

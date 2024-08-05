@@ -6,7 +6,7 @@ require('./DB/mongoDB')
 const app = express()
 app.use(express.json());
 app.use(cors({
-  origin:"https://group2vercel-frontend.vercel.app/",
+  origin:"https://group2vercel-frontend.vercel.app",
   credentials:true,
   methods:['POST','GET','DELETE','PUT']
 }));
@@ -18,15 +18,15 @@ const referenceRouter = require('./Routers/referenceRouter')
 const forumRouter = require('./Routers/forumRouter')
 const submitRouter = require('./Routers/Postroutes');
 
-app.use('/', authRouter);
-app.use('/', projectRouter);
-app.use('/', referenceRouter)
-app.use('/', forumRouter)
+app.use('/api', authRouter);
+app.use('/api', projectRouter);
+app.use('/api', referenceRouter)
+app.use('/api', forumRouter)
 
 
 // app.get('/*',function(req,res){res.sendFile(path.join(__dirname,'../Frontend/index.html'));});
 
-app.use('/', submitRouter);
+app.use('/api', submitRouter);
 
 const port = process.env.PORT || 4000
 app.listen(port, () => {

@@ -5,10 +5,10 @@ const projectRouter = express.Router()
 
 
 
-projectRouter.get('/api/getproject', verifyToken,getProject)
-projectRouter.post('/api/selectproject',verifyToken,selectProject)
-projectRouter.get('/api/displayproject',verifyToken,displayProject)
-projectRouter.post('/api/addproject',addProject)
+projectRouter.get('/getproject', verifyToken,getProject)
+projectRouter.post('/selectproject',verifyToken,selectProject)
+projectRouter.get('/displayproject',verifyToken,displayProject)
+projectRouter.post('/addproject',addProject)
 
 
 

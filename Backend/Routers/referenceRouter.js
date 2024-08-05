@@ -4,7 +4,7 @@ const { getReference, addReference } = require('../Controller/referenceControlle
 const referenceRouter = express.Router()
 
 
-referenceRouter.get('/api/getrefs', verifyToken,getReference)
-referenceRouter.post('/api/addreference/:project_id', addReference)
+referenceRouter.get('/getrefs', verifyToken,getReference)
+referenceRouter.post('/addreference/:project_id', addReference)
 
 module.exports = referenceRouter
