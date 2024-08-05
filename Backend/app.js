@@ -24,7 +24,7 @@ app.use('/api', referenceRouter)
 app.use('/api', forumRouter)
 
 
-app.get('/*',function(req,res){res.sendFile(path.join(__dirname,'../Frontend/index.html'));});
+// app.get('/*',function(req,res){res.sendFile(path.join(__dirname,'../Frontend/index.html'));});
 
 app.use('/api', submitRouter);
 
