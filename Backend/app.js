@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(cors({
   origin:"https://group2vercel-frontend.vercel.app",
   credentials:true,
-  methods:['POST','GET','DELETE','PUT']
+  methods:['POST','GET','DELETE','PUT','PATCH']
 }));
 app.use('/uploads', express.static('Uploads'));
 
